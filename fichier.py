@@ -1,4 +1,5 @@
 
+categorie = "enveloppe"
 def creation_colis(categorie):
     print("creation {categorie} colis")
     if categorie == "enveloppe":
@@ -40,4 +41,4 @@ def prendre_colis(ascenceur, categorie):
         return 1
     else:
         return 0
- #Ici on regarde si on peut mettre un nouveau colis ou non
+ #Ici on regarde si on peut mettre un nouveau colis ou non, si la sortie est 0 le colis n'a pas pu etre mis, si la sortie est 1 nous avons pu mettre notre colis
