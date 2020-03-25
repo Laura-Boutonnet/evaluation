@@ -24,11 +24,11 @@ def creation_colis2(categories):
     return [creation_colis(categorie) for categorie in categories]
 #Ici on retourne chacun de nos colis cree avec leurs poids associes
 
-ascenceur = {"colis2": [], "poids_max": 25}
+ascenceur = {"colis": [], "poids_max": 25}
 #Ici on cree notre ascenceur avec un poids maximale de 25 kilos
 
 def poids_restant_dans_l_ascenceur(ascenceur):
-    return sledge["poids_max"] - sum(categorie["poids"] for categorie in ascenceur["categories"])
+    return ascenceur["poids_max"] - sum(categorie["poids"] for categorie in ascenceur["categories"])
 #Ici on calcule le poids restant dans l'ascenceur
 
 def poids_dans_l_ascenceur(ascenceur):
