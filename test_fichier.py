@@ -1,5 +1,5 @@
 import unittest
-from fichier import prendre_colis, final_colis_poids, creation_colis, creation_colis2
+from fichier import prendre_colis, poids_dans_l_ascenceur, creation_colis, creation_colis2
 
 
 class MyTestCase(unittest.TestCase):
@@ -34,14 +34,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(prise, [True, True, True, True, True, True, True, False])
         self.assertEqual(ascenceur["colis"], lot[:7])
 
-    def test_final_colis_poids(self):
+    def test_poids_dans_l_ascenceur(self):
         ascenceur = {'colis': [], 'poids_max': 25}
         lot = creation_colis2(['enveloppe', 'petit', 'moyen', 'grand','enorme','petit','enveloppe','enorme'])
         prise = [prendre_colis(ascenceur, colis) for colis in lot]
         self.assertEqual(prise, [True, True, True, True, True, True, True, False])
 
-        final_colis_poids(ascenceur)
-        self.assertFalse(ascenceur['categories'])
+        poids_dans_l_ascenceur(ascenceur)
+        self.assertEqual(ascenceur["colis"], lot[:7])
 """
     def test_ship(self):
         categories, ascenceur = self.categorie, self.ascenceur
