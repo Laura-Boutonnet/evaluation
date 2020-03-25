@@ -47,9 +47,14 @@ def final_colis_poids(ascenceur):
     print(f"Dans l'ascenceur il y a {len(ascenceur['categorie'])} colis")
     print(f"L'ascenceur porte {poids_dans_l_ascenceur(ascenceur)} kg de colis")
  
+
 if __name__ == "__main__":
-   nb_colis = input('Entrez le nombre de colis')
-   from random import choices
+    import sys
+    if len(sys.argv) == 2:
+        nb_colis = int(sys.argv[1])
+    else:
+        nb_colis = 15
+    from random import choices
     categorie = choices(["enveloppe", "petit", "moyen", "grand", "enorme"], k=nb_colis)
     creation_colis(categorie)
-  pass
+
