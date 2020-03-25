@@ -43,7 +43,7 @@ def prendre_colis(ascenceur, categorie):
         return 0
  #Ici on regarde si on peut mettre un nouveau colis ou non, si la sortie est 0 le colis n'a pas pu etre mis, si la sortie est 1 nous avons pu mettre notre colis
 
-def ship(ascenceur):
+def final_colis_poids(ascenceur):
     print(f"Dans l'ascenceur il y a {len(ascenceur['categorie'])} colis")
     print(f"L'ascenceur porte {poids_dans_l_ascenceur(ascenceur)} kg de colis")
  
