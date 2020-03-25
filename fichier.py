@@ -1,5 +1,4 @@
 
-categorie = "enveloppe"
 def creation_colis(categorie):
     print("creation {categorie} colis")
     if categorie == "enveloppe":
@@ -44,9 +43,13 @@ def prendre_colis(ascenceur, categorie):
         return 0
  #Ici on regarde si on peut mettre un nouveau colis ou non, si la sortie est 0 le colis n'a pas pu etre mis, si la sortie est 1 nous avons pu mettre notre colis
 
+def ship(ascenceur):
+    print(f"Dans l'ascenceur il y a {len(ascenceur['categorie'])} colis")
+    print(f"L'ascenceur porte {poids_dans_l_ascenceur(ascenceur)} kg de colis")
+ 
 if __name__ == "__main__":
    nb_colis = input('Entrez le nombre de colis')
    from random import choices
-    type_categorie = choices(["enveloppe", "petit", "moyen", "grand", "enorme"], k=nb_colis)
-    creation_colis(type_categorie)
+    categorie = choices(["enveloppe", "petit", "moyen", "grand", "enorme"], k=nb_colis)
+    creation_colis(categorie)
   pass
