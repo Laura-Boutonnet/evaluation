@@ -46,7 +46,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEquals(ascenceur['categories'], [restant[0]])
         
 if __name__ == "__main__":
+    import fichier
     import doctest
-    doctest.testmod(verbose=True)
+    doctest.testmod(fichier, verbose=True)
     import unittest
     unittest.main()
