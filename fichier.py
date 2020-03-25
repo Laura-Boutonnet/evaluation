@@ -43,3 +43,10 @@ def prendre_colis(ascenceur, categorie):
     else:
         return 0
  #Ici on regarde si on peut mettre un nouveau colis ou non, si la sortie est 0 le colis n'a pas pu etre mis, si la sortie est 1 nous avons pu mettre notre colis
+
+if __name__ == "__main__":
+   nb_colis = input('Entrez le nombre de colis')
+   from random import choices
+    type_categorie = choices(["enveloppe", "petit", "moyen", "grand", "enorme"], k=nb_colis)
+    creation_colis(type_categorie)
+  pass
