@@ -31,3 +31,9 @@ class MyTestCase(unittest.TestCase):
     
         final_colis_poids(ascenceur)
         self.assertFalse(ascenceur['categories'])
+        
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
+    import unittest
+    unittest.main()
