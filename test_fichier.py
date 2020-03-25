@@ -26,37 +26,23 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(prises, [True, True, False])
         self.assertEqual(ascenceur["colis"], lot3enormes[:2])
 
-    """
+    
     def test_prendre_colis(self):
-        enveloppe, petit, moyen, grand, enorme, petit, enveloppe, enorme = [
-                creation_colis(categorie) for categorie in
-                ['enveloppe', 'petit', 'moyen', 'grand', 'enorme', 'petit', 'envloppe', 'enorme']]
-        ascenceur = {'categories': [], 'poids_max': 25}
-        self.assertEqual(prendre_colis(ascenceur, enveloppe), True)
-        self.assertTrue(prendre_colis(ascenceur, petit))
-        self.assertTrue(prendre_colis(ascenceur, moyen))
-        self.assertTrue(prendre_colis(ascenceur, grand))
-        self.assertTrue(prendre_colis(ascenceur, enorme))
-        self.assertTrue(prendre_colis(ascenceur, petit))
-        self.assertTrue(prendre_colis(ascenceur, enveloppe))
-        self.assertFalse(prendre_colis(ascenceur, enorme), f"Nous ne pouvons pas accepter un colis de cette categorie car le poids du colis est suppérieur au poids libre restant dans l'ascenceur")
+        ascenceur = {'colis': [], 'poids_max': 25}
+        lot = creation_colis2(['enveloppe', 'petit', 'moyen', 'grand','enorme','petit','enveloppe','enorme'])
+        prise = [prendre_colis(ascenceur, colis) for colis in lot]
+        self.assertEqual(prise, [True, True, True, True, True, True, True, False])
+        self.assertEqual(ascenceur["colis"], lot[:7])
 
     def test_final_colis_poids(self):
-        enveloppe, petit, moyen, grand, enorme, petit, enveloppe, enorme = [creation_colis(categorie) for categorie in
-                ['enveloppe', 'petit', 'moyen', 'grand', 'enorme', 'petit', 'envloppe', 'enorme']]
-        ascenceur = {'categories': [], 'poids_max': 25}
-        self.assertEqual(prendre_colis(ascenceur, enveloppe), True)
-        self.assertTrue(prendre_colis(ascenceur, petit))
-        self.assertTrue(prendre_colis(ascenceur, moyen))
-        self.assertTrue(prendre_colis(ascenceur, grand))
-        self.assertTrue(prendre_colis(ascenceur, enorme))
-        self.assertTrue(prendre_colis(ascenceur, petit))
-        self.assertTrue(prendre_colis(ascenceur, enveloppe))
-        self.assertFalse(prendre_colis(ascenceur, enorme), f"Nous ne pouvons pas accepter un colis de cette categorie car le poids du colis est suppérieur au poids libre restant dans l'ascenceur")
+        ascenceur = {'colis': [], 'poids_max': 25}
+        lot = creation_colis2(['enveloppe', 'petit', 'moyen', 'grand','enorme','petit','enveloppe','enorme'])
+        prise = [prendre_colis(ascenceur, colis) for colis in lot]
+        self.assertEqual(prise, [True, True, True, True, True, True, True, False])
 
         final_colis_poids(ascenceur)
         self.assertFalse(ascenceur['categories'])
-
+"""
     def test_ship(self):
         categories, ascenceur = self.categorie, self.ascenceur
         a1 = categories[:7]
