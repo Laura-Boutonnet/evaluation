@@ -1,5 +1,4 @@
 #q1
-
 def sup21(nbr):
     if nbr >= 21:
         print(True)
@@ -25,6 +24,7 @@ def to_strings(dic):
 def extremites(liste2):
     return liste[2:] + liste[-2:]
 
+#q6
 class Mot():
     def __init__ (self, mot):
         self.mot = mot
@@ -36,11 +36,11 @@ class Mot():
             if lettre.lower() in mot.lower():
                 print(self.count(lettre.lower()))
 
-
+#q7
 def tri_et_inverse(liste):
     return (sorted(liste), reversed(liste))
        
-        
+#q8       
 def aller_a_paris(input_call=input):
     # code a remplir
     while input_call.lower() != 'paris':
