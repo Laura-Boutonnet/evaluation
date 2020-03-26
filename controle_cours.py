@@ -49,12 +49,7 @@ def aller_a_paris(input_call=input):
         return 0, 'Nulle Part'
   
 #q9
-ville_nom_pays = {
-        'Paris':'France',
-        'Berlin':'Allemagne',
-        'Madrid':'Espagne',
-        'Moscou':'Russie'
-        } 
+ville_nom_pays = {'Paris':'France','Berlin':'Allemagne','Madrid':'Espagne','Moscou':'Russie'} 
 
 #q10
 class Pays():
@@ -63,12 +58,7 @@ class Pays():
         self.visa = visa
 
 
-ville_pays = {
-        'Paris':'France',
-        'Berlin':'Allemagne',
-        'Madrid':'Espagne',
-        'Moscou':'Russie'
-        }
+ville_pays = {'Paris':'France','Berlin':'Allemagne','Madrid':'Espagne','Moscou':'Russie'        }
 
 if __name__ == "__main__": 
 
